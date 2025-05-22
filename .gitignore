@@ -3,6 +3,8 @@ dist/
 static/
 **/Win32/
 **/Win64/
+**/Android/
+**/Android64/
 src/View/uAPIKeys.pas
 
 # Delphi history and backups
