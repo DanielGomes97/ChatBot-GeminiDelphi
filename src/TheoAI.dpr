@@ -9,10 +9,11 @@ uses
   uUtils in 'utils\uUtils.pas',
   uAPIKeys in 'View\uAPIKeys.pas';
 
+
 {$R *.res}
 
 begin
-  GlobalUseSkia := True;
+  GlobalUseSkia := True;//
   Application.Initialize;
   Application.CreateForm(TFrmDashboard, FrmDashboard);
   Application.Run;
