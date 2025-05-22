@@ -28,7 +28,6 @@ const
   URL_LINKEDIN: String = 'https://www.linkedin.com/in/danielgommes/';
   URL:          String = 'https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent?key=';
 
-
 var
   KeyBoardEstaVisivel: Boolean;
 

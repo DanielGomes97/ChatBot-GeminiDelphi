@@ -311,7 +311,7 @@ begin
     SkLabel9.Words.Clear;
     ComponentIndex := 0;
     LoTelaVazia.Visible := True;
-    BtnFecharMenu.OnClick(Sender);  //
+    BtnFecharMenu.OnClick(Sender);
 end;
 
 procedure TFrmDashboard.BtnSvgMenuClick(Sender: TObject);

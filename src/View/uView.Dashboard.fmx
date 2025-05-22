@@ -10542,7 +10542,7 @@ object FrmDashboard: TFrmDashboard
     Enabled = False
     Interval = 15
     OnTimer = TimerScrollTimer
-    Left = 360
+    Left = 368
     Top = 312
   end
   object RESTClient1: TRESTClient

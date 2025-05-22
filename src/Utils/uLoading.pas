@@ -18,8 +18,6 @@ type
           class procedure Show(const Frm : Tform; const msg : string);
           class procedure Hide;
           class procedure ChangeText(NewText: string); static;
-
-
 end;
 
 var
@@ -28,8 +26,6 @@ var
 implementation
 
 { TLoading }
-
-
 class procedure TLoading.Hide;
 begin
     if Assigned(Layout) then
@@ -52,11 +48,11 @@ begin
         except
         end;
     end;
-    Mensagem := nil;
-    Animacao := nil;
-    Arco := nil;
-    Layout := nil;
-    Fundo := nil;
+    Mensagem  := nil;
+    Animacao  := nil;
+    Arco      := nil;
+    Layout    := nil;
+    Fundo     := nil;
 end;
 
 class procedure TLoading.Show(const Frm : Tform; const msg: string);
@@ -74,7 +70,6 @@ begin
     Fundo.Stroke.Kind := TBrushKind.None;
     Fundo.Visible := true;
 
-
     // Layout contendo o texto e o arco...
     Layout := TLayout.Create(Frm);
     Layout.Opacity := 0;
@@ -91,11 +86,11 @@ begin
     Arco.Parent := Layout;
     Arco.Align := TAlignLayout.Center;
     Arco.Margins.Bottom := 55;
-    Arco.Width := 45;//25
-    Arco.Height := 45;//25
+    Arco.Width := 45;
+    Arco.Height := 45;
     Arco.EndAngle := 280;
-    Arco.Stroke.Color := $FFFEFFFF; //$FF4122D9;
-    Arco.Stroke.Thickness := 2;//2
+    Arco.Stroke.Color := $FFFEFFFF;
+    Arco.Stroke.Thickness := 2;
     Arco.Position.X := trunc((Layout.Width - Arco.Width) / 2);
     Arco.Position.Y := 0;
 
@@ -119,7 +114,7 @@ begin
     Mensagem.Font.Size := 18;
     Mensagem.Height := 70;
     Mensagem.Width := Frm.Width - 100;
-    Mensagem.FontColor := $FFFEFFFF; //$FF4122D9;//
+    Mensagem.FontColor := $FFFEFFFF;
     Mensagem.TextSettings.HorzAlign := TTextAlign.Center;
     Mensagem.TextSettings.VertAlign := TTextAlign.Leading;
     Mensagem.StyledSettings := [TStyledSetting.Family, TStyledSetting.Style];
@@ -130,10 +125,8 @@ begin
     Mensagem.SetFocus;
 
     // Exibe os controles...
-    //Fundo.AnimateFloat('Opacity', 0.7);
     TAnimator.AnimateFloat(Fundo,  'Opacity', 0.7);
     TAnimator.AnimateFloat(Layout, 'Opacity', 1);
-    //Layout.AnimateFloat('Opacity', 1);
     Layout.BringToFront;
 
     // Esconde o teclado virtual...
