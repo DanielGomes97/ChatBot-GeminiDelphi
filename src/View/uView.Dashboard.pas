@@ -405,6 +405,7 @@ begin
                 'Sempre responda em português do Brasil. '+
                 'Você não gera imagem/audio/documento. '+
                 'Você usa API Theo';
+
         ChatHistory.Add(MsgOculto);
     end;
 end;
